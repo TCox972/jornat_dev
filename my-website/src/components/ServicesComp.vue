@@ -20,13 +20,23 @@
           :key="service.name"
           class="task_right"
         >
-          <v-icon x-large color="#66C047" class="mr-16"
-            >{{service.icon}}</v-icon
-          >
-          <p>{{service.name}}</p>
+          <v-icon x-large color="#66C047" class="mr-16">{{
+            service.icon
+          }}</v-icon>
+          <p>{{ service.name }}</p>
         </div>
       </div>
     </div>
+    <v-btn
+      text
+      width="216px"
+      height="64px"
+      color="white"
+      elevation="4"
+      class="cta__devis body-1 font-weight-bold mt-12 mb-12"
+    >
+      OBTENEZ UN DEVIS
+    </v-btn>
   </v-container>
 </template>
 
@@ -69,8 +79,9 @@ export default {
 
 <style scoped>
 #services {
-  min-height: 768px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   background-image: url("../../public/images/map-background.jpg");
   background-clip: border-box;
   background-position: center;
@@ -86,7 +97,6 @@ export default {
 .task {
   display: flex;
   justify-content: space-around;
-  height: 96px;
 }
 
 .task p {
@@ -112,5 +122,10 @@ export default {
 
 .task_col {
   width: 35%;
+}
+
+.cta__devis {
+  align-self: center;
+  background-color: #66C047;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="home">
+  <v-container fluid id="home" class="home">
     <div class="welcome">
       <h1>DEVELOPPEUR WEB</h1>
       <p id="subtitle">Le site à l'image de votre entreprise</p>
@@ -8,11 +8,13 @@
         width="216px"
         height="64px"
         color="white"
+        elevation="4"
         class="cta__contact body-1 font-weight-bold"
       >
         CONTACTEZ-MOI
       </v-btn>
     </div>
+
   </v-container>
 </template>
 
@@ -58,5 +60,11 @@ h1 {
 .cta__contact {
   background-color: #66C047;
   margin: 16px;
+}
+.up{
+  position: absolute;
+  bottom: 100;
+  right: 10;
+  z-index: 1;
 }
 </style>

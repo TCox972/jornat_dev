@@ -7,8 +7,7 @@
     <nav>
       <v-btn plain tile class="items" text @click="scroll('home')">ACCUEIL</v-btn>
       <v-btn plain tile class="items" text @click="scroll('services')">SERVICES</v-btn>
-      <v-btn plain tile class="items" text @click="scroll('portfolio')">PORTFOLIO</v-btn>
-      <v-btn plain tile class="items" text @click="scroll('tarifs')">TARIFS</v-btn>
+      <v-btn plain tile class="items" text @click="scroll('prices')">TARIFS</v-btn>
       <v-btn plain tile class="items" text @click="scroll('contact')">CONTACT</v-btn>
     </nav>
   </v-app-bar>
@@ -27,8 +26,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 
 .items{
   font-weight: 600;
