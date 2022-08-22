@@ -28,7 +28,7 @@ export default {
 
 
 .home {
-  min-height: 768px;
+  min-height: 824px;
   width: 100%;
   background-image: url("../../public/images/office.jpg");
   background-clip: border-box;
@@ -66,5 +66,19 @@ h1 {
   bottom: 100;
   right: 10;
   z-index: 1;
+}
+
+@media screen and (max-width: 420px) {
+  .home {
+    min-height: 844px;
+  }
+
+  .welcome{
+    width: auto;
+  }
+
+  h1{
+    font-size: 48px;
+  }
 }
 </style>

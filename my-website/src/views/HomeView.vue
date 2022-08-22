@@ -63,4 +63,11 @@ export default {
   bottom: 75px;
   right: 75px;
 }
+
+@media screen and (max-width:420px) {
+  #scrollUp {
+    bottom:   30px;
+    right: 15px;
+  }
+}
 </style>

@@ -128,4 +128,15 @@ export default {
   align-self: center;
   background-color: #66C047;
 }
+
+@media screen and (max-width:420px) {
+  .task{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task_col{
+    width: 90%;
+  }
+}
 </style>

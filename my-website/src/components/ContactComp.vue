@@ -8,8 +8,8 @@
       </p>
       <div class="sous"></div>
     </div>
-    <v-container class="d-flex justify-space-around">
-      <div style="width: 40%" class="form">
+    <v-container class="contact-container d-flex justify-space-around">
+      <div class="form">
         <v-form v-model="valid">
           <v-container>
             <v-text-field
@@ -54,8 +54,8 @@
           </v-container>
         </v-form>
       </div>
-      <div style="width: 40%" class="infos py-3 pl-8">
-        <div v-for="info in infos" :key="info.name" class="d-flex">
+      <div class="infos py-3">
+        <div v-for="info in infos" :key="info.name" class="infos_card d-flex">
           <v-icon class="align-self-start mr-8" color="#66c047">{{
             info.icon
           }}</v-icon>
@@ -133,6 +133,14 @@ input {
   align-items: center;
 }
 
+.form{
+    width: 40%;
+  }
+
+.infos{
+  width: 40%;
+}
+
 .name {
   font-size: 36px;
 }
@@ -151,5 +159,25 @@ input {
 
 .cta__devis {
   background-color: #66c047;
+}
+
+@media screen and (max-width:420px) {
+  .contact-container{
+    flex-direction: column;
+  }
+
+  .form{
+    width: 100%;
+  }
+
+  .infos{
+    width: 70%;
+    align-self: center;
+    padding-left: 0px;
+  }
+
+  .cta{
+    text-align: center;
+  }
 }
 </style>

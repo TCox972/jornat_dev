@@ -5,13 +5,13 @@
       <p class="mb-8">Un tarif adapté pour chaque besoin</p>
       <div class="sous"></div>
     </div>
-    <v-container class="d-flex">
+    <v-container class=" price-container d-flex">
       <v-card
         v-for="item in site"
         :key="item.name"
-        width="360"
-        class="mx-auto my-12"
-        max-width="374"
+        width="100%"
+        class="price-item mx-auto my-12"
+        max-width="366"
       >
         <v-card-title
           class="
@@ -201,5 +201,14 @@ export default {
 .cta__devis {
   align-self: center;
   background-color: #66C047;
+}
+
+@media screen and (max-width:420px) {
+  .price-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 </style>
