@@ -38,26 +38,26 @@
                 <br />
                 <h2>Site Internet</h2>
                 <br />
-                Nom du site : jornat-dev.com <br />
-                URL complète : https://www.jornat-dev.com <br />
+                Nom du site : Jean-Jerome Jornat - Développeur Freelance <br />
+                URL complète : https://www.jeanjrm-jornat.com <br />
                 <br />
                 <h2>Editeur du site</h2>
                 <br />
 
-                M.Jean-Jérôme Jornat <br />
+                M. Jean-Jérôme Jornat <br />
                 Numéro du SIRET : 91241683100010 <br />
                 Code NAF : Programmation informatique (6201Z) <br />
                 Responsable éditorial : Jean-Jérôme Jornat <br />
                 Non inscrit au Registre du Commerce et des Sociétés <br />
                 Siège social : 32 B rue Vincent Placoly, 97233 Schoecher<br />
-                Email : contact@jornat-dev.com<br />
+                Email : contact@jeanjrm-jornat.com<br />
                 <br />
                 <h2>Hébergement</h2>
                 <br />
 
-                Hébergeur : <br />
-                Adresse :<br />
-                Site web :
+                Hébergeur : HOSTINGER <br />
+                Adresse :  Hostinger International Ltd. 61 rue Lordou Vironos, 6023<br />
+                Site web : https://www.hostinger.fr/
               </v-card-text>
 
               <v-divider></v-divider>
@@ -79,7 +79,7 @@
 
             <v-card>
               <v-card-title class="text-h5 grey lighten-2">
-                Conditions générale d’utilisation
+                Conditions générales d’utilisation
               </v-card-title>
 
               <v-card-text>
@@ -91,7 +91,7 @@
                 l’année, mais peut toutefois contenir des inexactitudes ou des
                 omissions. Si vous constatez une lacune, erreur ou ce qui parait
                 être un dysfonctionnement, merci de bien vouloir le signaler par
-                email, à l’adresse contact@maxime-benard.fr, en décrivant le
+                email, à l’adresse contact@jeanjrm-jornat.com, en décrivant le
                 problème de la manière la plus précise possible (page posant
                 problème, type d’ordinateur et de navigateur utilisé, …). Tout
                 contenu téléchargé se fait aux risques et périls de
@@ -108,7 +108,7 @@
                 <br />
                 <h2>Propriété intellectuelle</h2>
                 <br />
-                Tout le contenu du présent sur le site www.jornat-dev.com,
+                Tout le contenu du présent sur le site www.jeanjrm-jornat.com,
                 incluant, de façon non limitative, les graphismes, images,
                 textes, vidéos, animations, sons, logos, gifs et icônes ainsi
                 que leur mise en forme sont la propriété exclusive de la société
@@ -116,8 +116,8 @@
                 d'autres sociétés partenaires ou auteurs. Toute reproduction,
                 distribution, modification, adaptation, retransmission ou
                 publication, même partielle, de ces différents éléments est
-                strictement interdite sans l'accord exprès par écrit de Bénard
-                Maxime. Cette représentation ou reproduction, par quelque
+                strictement interdite sans l'accord exprès par écrit de Jean-Jerome Jornat.
+                Cette représentation ou reproduction, par quelque
                 procédé que ce soit, constitue une contrefaçon sanctionnée par
                 les articles L.335-2 et suivants du Code de la propriété
                 intellectuelle. Le non-respect de cette interdiction constitue
@@ -139,7 +139,7 @@
                 <h2>Litiges</h2>
                 <br />
                 Les présentes conditions d’utilisation du site
-                www.jornat-dev.com sont régies par les lois françaises et toute
+                www.jeanjrm-jornat.com sont régies par les lois françaises et toute
                 contestation ou litiges qui pourraient naitre de
                 l’interprétation ou de l’exécution de celles-ci seront de la
                 compétence exclusive des tribunaux dont dépend le siège sociale
@@ -188,8 +188,8 @@
 
       <v-divider></v-divider>
 
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Jornat.com</strong>
+      <v-card-text class="white--text"> COPYRIGHT ©
+        {{ new Date().getFullYear() }} — <strong>JEAN-JEROME JORNAT</strong>
       </v-card-text>
     </v-card>
   </v-footer>

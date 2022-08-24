@@ -2,7 +2,7 @@
   <v-container fluid id="home" class="home">
     <div class="welcome">
       <h1>DEVELOPPEUR WEB</h1>
-      <p id="subtitle">Le site à l'image de votre entreprise</p>
+      <p id="subtitle">Le site à l'image de votre entreprise <br>par Jean-Jérôme Jornat</p>
       <v-btn
         text
         width="216px"
