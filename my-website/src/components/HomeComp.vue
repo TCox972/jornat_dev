@@ -31,8 +31,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
+@import '../scss/variables.scss';
 
 .home {
   min-height: 824px;
@@ -65,7 +66,7 @@ h1 {
 }
 
 .cta__contact {
-  background-color: #66C047;
+  background-color: $basecolor;
   margin: 16px;
 }
 .up{

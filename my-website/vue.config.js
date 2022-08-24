@@ -5,11 +5,7 @@ module.exports = defineConfig({
   ],
   css: {
     loaderOptions: {
-      scss: {
-        prependData: `
-        @import "@/scss/base/variables.scss";
-        `
-      }
+
     }
   }
 })

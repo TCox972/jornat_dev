@@ -126,9 +126,9 @@ export default {
     sendEmail() {
       Email.send({
         SecureToken : "66f7968f-970d-4e4d-a957-0867485c9388",
-        To: "jornat.jerome@gmail.com",
+        To: "contact@jeanjrm-jornat.com",
         From: this.email,
-        Subject: this.subject,
+        Subject: "Demande d'infos pour : " + this.subject,
         Body: "Vous avez une nouvelle demande de contact pour : " + this.subject + "."
               + "<br> Société : " + this.society
               + "<br> Email : " + this.email
