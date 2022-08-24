@@ -13,17 +13,9 @@
         <v-form v-model="valid">
           <v-container>
             <v-text-field
-              v-model="firstname"
-              :rules="fieldRules"
-              label="Prénom"
-              filled
-              color="#66c047"
-              required
-            ></v-text-field>
-            <v-text-field
-              v-model="lastname"
-              :rules="fieldRules"
-              label="Nom"
+              v-model="email"
+              :rules="emailRules"
+              label="E-mail"
               filled
               color="#66c047"
               required
@@ -34,14 +26,15 @@
               filled
               color="#66c047"
             ></v-text-field>
-            <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              label="E-mail"
+            <v-select
+              v-model="subject"
+              :items="items"
+              :rules="fieldRules"
+              label="Sujet"
               filled
               color="#66c047"
               required
-            ></v-text-field>
+            ></v-select>
             <v-textarea
               v-model="message"
               :rules="fieldRules"
@@ -73,25 +66,34 @@
             color="white"
             elevation="4"
             class="cta__devis body-1 font-weight-bold mt-12 mb-12"
+            @click="sendEmail()"
           >
-            OBTENEZ UN DEVIS
+            ENVOYER
           </v-btn>
         </div>
       </div>
     </v-container>
   </v-container>
 </template>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 export default {
   name: "ContactComp",
+
   data: () => ({
     valid: false,
-    firstname: "",
-    lastname: "",
-    society: "",
-    fieldRules: [(v) => !!v || "Ce champ est requis"],
     email: "",
+    society: "",
+    subject: null,
+    items: [
+      "Site vitrine",
+      "Site e-commerce",
+      "Refonte de site",
+      "Maintenance",
+      "Autres",
+    ],
+    message: "",
+    fieldRules: [(v) => !!v || "Ce champ est requis"],
     emailRules: [
       (v) => !!v || "L'email est requis",
       (v) => /.+@.+/.test(v) || "Saisissez une adresse mail valide",
@@ -120,6 +122,20 @@ export default {
       },
     ],
   }),
+  methods: {
+    sendEmail() {
+      Email.send({
+        SecureToken : "66f7968f-970d-4e4d-a957-0867485c9388",
+        To: "jornat.jerome@gmail.com",
+        From: this.email,
+        Subject: this.subject,
+        Body: "Vous avez une nouvelle demande de contact pour : " + this.subject + "."
+              + "<br> Société : " + this.society
+              + "<br> Email : " + this.email
+              + "<br> Message : " + this.message
+      }).then((message) => alert(message));
+    },
+  },
 };
 </script>
 
@@ -133,11 +149,11 @@ input {
   align-items: center;
 }
 
-.form{
-    width: 40%;
-  }
+.form {
+  width: 40%;
+}
 
-.infos{
+.infos {
   width: 40%;
 }
 
@@ -161,22 +177,22 @@ input {
   background-color: #66c047;
 }
 
-@media screen and (max-width:420px) {
-  .contact-container{
+@media screen and (max-width: 420px) {
+  .contact-container {
     flex-direction: column;
   }
 
-  .form{
+  .form {
     width: 100%;
   }
 
-  .infos{
+  .infos {
     width: 70%;
     align-self: center;
     padding-left: 0px;
   }
 
-  .cta{
+  .cta {
     text-align: center;
   }
 }

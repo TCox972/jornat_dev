@@ -33,6 +33,7 @@
       height="64px"
       color="white"
       elevation="4"
+      @click="scroll('contact')"
       class="cta__devis body-1 font-weight-bold mt-12 mb-12"
     >
       OBTENEZ UN DEVIS
@@ -74,6 +75,12 @@ export default {
       },
     ],
   }),
+  methods: {
+    scroll(refName) {
+      const element = document.getElementById(refName);
+      element.scrollIntoView({ behavior: "smooth" });
+    },
+  },
 };
 </script>
 

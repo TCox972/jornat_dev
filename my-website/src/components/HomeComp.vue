@@ -9,6 +9,7 @@
         height="64px"
         color="white"
         elevation="4"
+        @click="scroll('contact')"
         class="cta__contact body-1 font-weight-bold"
       >
         CONTACTEZ-MOI
@@ -21,6 +22,12 @@
 <script>
 export default {
   name: "HomeComp",
+  methods: {
+    scroll(refName) {
+      const element = document.getElementById(refName);
+      element.scrollIntoView({ behavior: "smooth" });
+    },
+  },
 };
 </script>
 
@@ -70,7 +77,7 @@ h1 {
 
 @media screen and (max-width: 420px) {
   .home {
-    min-height: 844px;
+    min-height: 896px;
   }
 
   .welcome{

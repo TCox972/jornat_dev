@@ -5,7 +5,7 @@
       <p class="mb-8">Un tarif adapté pour chaque besoin</p>
       <div class="sous"></div>
     </div>
-    <v-container class=" price-container d-flex">
+    <v-container class="price-container d-flex">
       <v-card
         v-for="item in site"
         :key="item.name"
@@ -104,9 +104,10 @@
             height="64px"
             color="white"
             elevation="4"
+            @click="scroll('contact')"
             class="cta__devis body-1 font-weight-bold mt-12 mb-12"
           >
-            OBTENEZ UN DEVIS
+            DEMANDEZ UN DEVIS
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -161,6 +162,12 @@ export default {
       },
     ],
   }),
+  methods: {
+    scroll(refName) {
+      const element = document.getElementById(refName);
+      element.scrollIntoView({ behavior: "smooth" });
+    },
+  },
 };
 </script>
 
@@ -200,15 +207,14 @@ export default {
 
 .cta__devis {
   align-self: center;
-  background-color: #66C047;
+  background-color: #66c047;
 }
 
-@media screen and (max-width:420px) {
-  .price-container{
+@media screen and (max-width: 420px) {
+  .price-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
 }
 </style>

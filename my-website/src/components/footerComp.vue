@@ -7,9 +7,9 @@
       class="grey darken-4 white--text text-center"
     >
       <v-card-text>
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
+        <v-btn v-for="el in links" :key="el.icon" class="mx-4 white--text" :href=el.link target="_blank" icon>
           <v-icon size="24px">
-            {{ icon }}
+            {{ el.icon }}
           </v-icon>
         </v-btn>
       </v-card-text>
@@ -189,7 +189,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Jornat-Dev</strong>
+        {{ new Date().getFullYear() }} — <strong>Jornat.com</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -199,7 +199,20 @@
 export default {
   name: "FooterComp",
   data: () => ({
-    icons: ["mdi-linkedin", "mdi-instagram", "mdi-github"],
+    links: [
+      {
+        icon:"mdi-linkedin",
+        link:'https://www.linkedin.com/in/jean-jérôme-jornat-57215658/'
+      },
+      {
+        icon:"mdi-instagram",
+        link:"https://www.instagram.com/iam_jeanjrm/"
+      },
+      {
+        icon:"mdi-github",
+        link:"https://github.com/TCox972"
+      }
+      ],
     dialogMl: false,
     dialogU: false
   }),
