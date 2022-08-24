@@ -48,7 +48,7 @@
         </v-card-text>
 
         <div class="d-flex align-center justify-start ml-4 prestations">
-          <v-icon small color="#66c047">fa-solid fa-play</v-icon>
+          <v-icon small color="primary">fa-solid fa-play</v-icon>
           <v-card-text style="font-size: 20px" class="text-center">{{
             item.el1
           }}</v-card-text>
@@ -56,42 +56,42 @@
         <v-divider class="mx-4"></v-divider>
 
         <div class="d-flex align-center justify-start ml-4 prestations">
-          <v-icon small color="#66c047">fa-solid fa-play</v-icon>
+          <v-icon small color="primary">fa-solid fa-play</v-icon>
           <v-card-text style="font-size: 20px" class="text-center">{{
             item.el2
           }}</v-card-text>
         </div>
         <v-divider class="mx-4"></v-divider>
         <div class="d-flex align-center justify-start ml-4 prestations">
-          <v-icon small color="#66c047">fa-solid fa-play</v-icon>
+          <v-icon small color="primary">fa-solid fa-play</v-icon>
           <v-card-text style="font-size: 20px" class="text-center">{{
             item.el3
           }}</v-card-text>
         </div>
         <v-divider class="mx-4"></v-divider>
         <div class="d-flex align-center justify-start ml-4 prestations">
-          <v-icon small color="#66c047">fa-solid fa-play</v-icon>
+          <v-icon small color="primary">fa-solid fa-play</v-icon>
           <v-card-text style="font-size: 20px" class="text-center">{{
             item.el4
           }}</v-card-text>
         </div>
         <v-divider class="mx-4"></v-divider>
         <div class="d-flex align-center justify-start ml-4 prestations">
-          <v-icon small color="#66c047">fa-solid fa-play</v-icon>
+          <v-icon small color="primary">fa-solid fa-play</v-icon>
           <v-card-text style="font-size: 20px" class="text-center">{{
             item.el5
           }}</v-card-text>
         </div>
         <v-divider class="mx-4"></v-divider>
         <div class="d-flex align-center justify-start ml-4 prestations">
-          <v-icon small color="#66c047">fa-solid fa-play</v-icon>
+          <v-icon small color="primary">fa-solid fa-play</v-icon>
           <v-card-text style="font-size: 20px" class="text-center">{{
             item.el6
           }}</v-card-text>
         </div>
         <v-divider class="mx-4"></v-divider>
         <div class="d-flex align-center justify-start ml-4 prestations">
-          <v-icon small color="#66c047">fa-solid fa-play</v-icon>
+          <v-icon small color="primary">fa-solid fa-play</v-icon>
           <v-card-text style="font-size: 20px" class="text-center">{{
             item.el7
           }}</v-card-text>
@@ -99,10 +99,9 @@
         <v-divider class="mx-4"></v-divider>
         <v-card-actions class="justify-center">
           <v-btn
-            text
             width="216px"
             height="64px"
-            color="white"
+            color="primary"
             elevation="4"
             @click="scroll('contact')"
             class="cta__devis body-1 font-weight-bold mt-12 mb-12"
@@ -171,9 +170,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import '../scss/variables.scss';
+
 #prices {
-  background-color: #f3f3f3;
+  background-color: $secondary;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,7 +195,7 @@ export default {
   height: 5px;
   width: 80px;
   margin: auto;
-  background-color: #66c047;
+  background-color: $primary;
 }
 
 .price {
@@ -207,7 +209,6 @@ export default {
 
 .cta__devis {
   align-self: center;
-  background-color: #66c047;
 }
 
 @media screen and (max-width: 420px) {

@@ -17,14 +17,14 @@
               :rules="emailRules"
               label="E-mail"
               filled
-              color="#66c047"
+              color="primary"
               required
             ></v-text-field>
             <v-text-field
               v-model="society"
               label="Entreprise"
               filled
-              color="#66c047"
+              color="primary"
             ></v-text-field>
             <v-select
               v-model="subject"
@@ -32,7 +32,7 @@
               :rules="fieldRules"
               label="Sujet"
               filled
-              color="#66c047"
+              color="primary"
               required
             ></v-select>
             <v-textarea
@@ -40,7 +40,7 @@
               :rules="fieldRules"
               label="Message"
               filled
-              color="#66c047"
+              color="primary"
               required
             >
             </v-textarea>
@@ -49,7 +49,7 @@
       </div>
       <div class="infos py-3">
         <div v-for="info in infos" :key="info.name" class="infos_card d-flex">
-          <v-icon class="align-self-start mr-8" color="#66c047">{{
+          <v-icon class="align-self-start mr-8" color="primary">{{
             info.icon
           }}</v-icon>
           <div class="mb-6">
@@ -60,10 +60,9 @@
         </div>
         <div class="cta">
           <v-btn
-            text
             width="216px"
             height="64px"
-            color="white"
+            color="primary"
             elevation="4"
             class="cta__devis body-1 font-weight-bold mt-12 mb-12"
             @click="sendEmail()"
@@ -139,10 +138,11 @@ export default {
 };
 </script>
 
-<style scoped>
-input {
-  border: solid #66c047 1px;
-}
+<style lang="scss" scoped>
+
+@import '../scss/variables.scss';
+
+
 #contact {
   display: flex;
   flex-direction: column;
@@ -170,11 +170,7 @@ input {
   height: 5px;
   width: 80px;
   margin: auto;
-  background-color: #66c047;
-}
-
-.cta__devis {
-  background-color: #66c047;
+  background-color: $primary;
 }
 
 @media screen and (max-width: 420px) {

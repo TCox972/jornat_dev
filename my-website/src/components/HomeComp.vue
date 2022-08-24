@@ -4,10 +4,9 @@
       <h1>DEVELOPPEUR WEB</h1>
       <p id="subtitle">Le site à l'image de votre entreprise <br>par Jean-Jérôme Jornat</p>
       <v-btn
-        text
         width="216px"
         height="64px"
-        color="white"
+        color="primary"
         elevation="4"
         @click="scroll('contact')"
         class="cta__contact body-1 font-weight-bold"
@@ -53,20 +52,19 @@ export default {
   align-items: center;
 }
 h1 {
-  color: white;
+  color: $secondary;
   font-size: 88px;
   text-align: center;
 }
 
 #subtitle {
-  color: white;
+  color: $secondary;
   font-size: 24px;
   font-weight: 500;
   text-align: center;
 }
 
 .cta__contact {
-  background-color: $basecolor;
   margin: 16px;
 }
 .up{

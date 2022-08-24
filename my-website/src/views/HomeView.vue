@@ -10,7 +10,7 @@
       <v-btn
         elevation="5"
         large
-        color="#66C047"
+        color="primary"
         class="items"
         icon
         @click="scroll('home')"

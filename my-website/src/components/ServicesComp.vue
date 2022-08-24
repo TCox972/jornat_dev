@@ -9,7 +9,7 @@
           class="task_left"
         >
           <p>{{ service.name }}</p>
-          <v-icon x-large color="#66C047" class="ml-16">{{
+          <v-icon x-large color="primary" class="ml-16">{{
             service.icon
           }}</v-icon>
         </div>
@@ -20,7 +20,7 @@
           :key="service.name"
           class="task_right"
         >
-          <v-icon x-large color="#66C047" class="mr-16">{{
+          <v-icon x-large color="primary" class="mr-16">{{
             service.icon
           }}</v-icon>
           <p>{{ service.name }}</p>
@@ -28,10 +28,9 @@
       </div>
     </div>
     <v-btn
-      text
       width="216px"
       height="64px"
-      color="white"
+      color="primary"
       elevation="4"
       @click="scroll('contact')"
       class="cta__devis body-1 font-weight-bold mt-12 mb-12"
@@ -84,7 +83,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import '../scss/variables.scss';
+
 #services {
   width: 100%;
   display: flex;
@@ -108,7 +110,7 @@ export default {
 
 .task p {
   margin-bottom: 0;
-  color: #383434;
+  color: $darkcolor;
   font-size: 28px;
   font-weight: bold;
 }
@@ -133,7 +135,6 @@ export default {
 
 .cta__devis {
   align-self: center;
-  background-color: #66C047;
 }
 
 @media screen and (max-width:420px) {

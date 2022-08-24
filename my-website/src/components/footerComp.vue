@@ -4,7 +4,8 @@
       flat
       tile
       width="100%"
-      class="grey darken-4 white--text text-center"
+      color="tertiary"
+      class="white--text text-center"
     >
       <v-card-text>
         <v-btn v-for="el in links" :key="el.icon" class="mx-4 white--text" :href=el.link target="_blank" icon>
@@ -24,13 +25,13 @@
         <div>
           <v-dialog v-model="dialogMl" width="600">
             <template v-slot:activator="{ on, attrs }">
-              <v-btn color="#66c047" text v-bind="attrs" v-on="on">
+              <v-btn color="primary" text v-bind="attrs" v-on="on">
                 Mention légales
               </v-btn>
             </template>
 
             <v-card>
-              <v-card-title class="text-h5 grey lighten-2">
+              <v-card-title class="text-h5 primary">
                 Mentions Légales
               </v-card-title>
 
@@ -72,13 +73,13 @@
         <div>
           <v-dialog v-model="dialogU" width="1000">
             <template v-slot:activator="{ on, attrs }">
-              <v-btn color="#66c047" text v-bind="attrs" v-on="on">
+              <v-btn color="primary" text v-bind="attrs" v-on="on">
                 C.G.U.
               </v-btn>
             </template>
 
             <v-card>
-              <v-card-title class="text-h5 grey lighten-2">
+              <v-card-title class="text-h5 primary">
                 Conditions générales d’utilisation
               </v-card-title>
 

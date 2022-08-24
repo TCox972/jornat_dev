@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-app-bar fixed height="88px" color="white" hide-on-scroll class="px-8">
+    <v-app-bar fixed height="88px" color="secondary" hide-on-scroll class="px-8">
       <v-img
         src="../../public/images/Capture d’écran 2022-08-20 à 10.54.46.png"
         max-height="88"
@@ -60,7 +60,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import '../scss/variables.scss';
+
 .toggle {
   display: none;
 }
@@ -68,11 +71,11 @@ export default {
 .items {
   font-weight: 600;
   margin-right: 24px;
-  color: #383434;
+  color: $darkcolor;
   font-size: 16px;
 }
 .items:hover {
-  border-bottom: 3px #66c047 solid;
+  border-bottom: 3px $primary solid;
 }
 
 @media screen and (max-width: 420px) {
@@ -88,8 +91,8 @@ export default {
   }
 
   .burger-item:hover{
-    border-top: 2px #66c047 solid;
-    border-bottom: 2px #66c047 solid;
+    border-top: 2px $primary solid;
+    border-bottom: 2px $primary solid;
     
   }
 }
