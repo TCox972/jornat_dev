@@ -111,6 +111,7 @@
         </v-card-actions>
       </v-card>
     </v-container>
+    <p>* Les tarifs indiqués sont H.T. - Prix à titre informatif : Des changements sont possibles selon les demandes et choix du client.</p>
   </v-container>
 </template>
 
@@ -123,7 +124,7 @@ export default {
       {
         name: "SITE VITRINE",
         name2: "PERSONNALISÉ",
-        tarif: "750",
+        tarif: "900",
         tarification: "€*",
         el1: "Développé sur mesure",
         el2: "Charte graphique personnalisée",
@@ -136,7 +137,7 @@ export default {
       {
         name: "SITE E-COMMERCE",
         name2: "PERSONNALISÉ",
-        tarif: "1800",
+        tarif: "2100",
         tarification: "€*",
         el1: "Développé sur mesure",
         el2: "Charte graphique personnalisée",
@@ -175,7 +176,7 @@ export default {
 @import '../scss/variables.scss';
 
 #prices {
-  background-color: $secondary;
+  background-color: $background;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,7 +211,11 @@ export default {
 .cta__devis {
   align-self: center;
 }
-
+@media screen and (max-width: 1263px) {
+  .price-container {
+    flex-wrap: wrap;
+  }
+}
 @media screen and (max-width: 420px) {
   .price-container {
     flex-direction: column;

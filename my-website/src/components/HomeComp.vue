@@ -2,7 +2,9 @@
   <v-container fluid id="home" class="home">
     <div class="welcome">
       <h1>DEVELOPPEUR WEB</h1>
-      <p id="subtitle">Le site à l'image de votre entreprise <br>par Jean-Jérôme Jornat</p>
+      <p id="subtitle">
+        Le site à l'image de votre entreprise <br />par Jean-Jérôme Jornat
+      </p>
       <v-btn
         width="216px"
         height="64px"
@@ -14,7 +16,6 @@
         CONTACTEZ-MOI
       </v-btn>
     </div>
-
   </v-container>
 </template>
 
@@ -31,12 +32,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@import '../scss/variables.scss';
+@import "../scss/variables.scss";
 
 .home {
   min-height: 824px;
-  width: 100%;
   background-image: url("../../public/images/office.jpg");
   background-clip: border-box;
   background-size: cover;
@@ -45,7 +44,7 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.welcome{
+.welcome {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -67,11 +66,19 @@ h1 {
 .cta__contact {
   margin: 16px;
 }
-.up{
+.up {
   position: absolute;
   bottom: 100;
   right: 10;
   z-index: 1;
+}
+@media screen and (max-width: 1263px) {
+  h1 {
+    font-size: 68px;
+  }
+  .welcome {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -79,11 +86,11 @@ h1 {
     min-height: 896px;
   }
 
-  .welcome{
+  .welcome {
     width: auto;
   }
 
-  h1{
+  h1 {
     font-size: 48px;
   }
 }

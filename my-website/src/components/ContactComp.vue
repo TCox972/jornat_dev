@@ -112,7 +112,7 @@ export default {
       {
         icon: "fa-solid fa-envelope",
         name: "EMAIL",
-        text: "jornat.jerome@gmail.com",
+        text: "contact@jeanjrm-jornat.com",
       },
       {
         icon: "fa-solid fa-file-invoice",
@@ -173,7 +173,7 @@ export default {
   background-color: $primary;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 710px) {
   .contact-container {
     flex-direction: column;
   }

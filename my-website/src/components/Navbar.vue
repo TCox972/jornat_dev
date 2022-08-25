@@ -78,7 +78,7 @@ export default {
   border-bottom: 3px $primary solid;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 740px) {
   .toggle {
     display: block;
   }

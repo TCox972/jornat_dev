@@ -16,7 +16,8 @@ export default new Vuetify({
             light: {
                 primary: colors.lightGreen.darken1,
                 secondary: colors.shades.white,
-                tertiary: colors.grey.darken4
+                tertiary: colors.grey.darken4,
+                background: colors.grey.lighten2
             }
         }
     }

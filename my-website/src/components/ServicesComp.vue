@@ -137,10 +137,12 @@ export default {
   align-self: center;
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:710px) {
   .task{
     flex-direction: column;
     align-items: center;
+    align-self: center;
+    max-width: 472px;
   }
 
   .task_col{
