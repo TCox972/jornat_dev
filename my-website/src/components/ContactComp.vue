@@ -126,13 +126,13 @@ export default {
       Email.send({
         SecureToken : "66f7968f-970d-4e4d-a957-0867485c9388",
         To: "contact@jeanjrm-jornat.com",
-        From: this.email,
+        From: "jornat.jerome@gmail.com",
         Subject: "Demande d'infos pour : " + this.subject,
         Body: "Vous avez une nouvelle demande de contact pour : " + this.subject + "."
               + "<br> Société : " + this.society
               + "<br> Email : " + this.email
               + "<br> Message : " + this.message
-      }).then((message) => alert(message));
+      }).then(() => alert("Votre message a été correctement envoyé"));
     },
   },
 };
