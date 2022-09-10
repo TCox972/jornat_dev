@@ -10,7 +10,7 @@
     </div>
     <v-container class="contact-container d-flex justify-space-around">
       <div class="form">
-        <v-form v-model="valid">
+        <v-form ref="form" v-model="valid">
           <v-container>
             <v-text-field
               v-model="email"
@@ -65,7 +65,7 @@
             color="primary"
             elevation="4"
             class="cta__devis body-1 font-weight-bold mt-12 mb-12"
-            @click="sendEmail()"
+            @click="sendEmail(), reset()"
           >
             ENVOYER
           </v-btn>
@@ -76,6 +76,8 @@
 </template>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
+import Swal from "sweetalert2";
+
 export default {
   name: "ContactComp",
 
@@ -124,24 +126,39 @@ export default {
   methods: {
     sendEmail() {
       Email.send({
-        SecureToken : "66f7968f-970d-4e4d-a957-0867485c9388",
+        SecureToken: "66f7968f-970d-4e4d-a957-0867485c9388",
         To: "contact@jeanjrm-jornat.com",
         From: "jornat.jerome@gmail.com",
         Subject: "Demande d'infos pour : " + this.subject,
-        Body: "Vous avez une nouvelle demande de contact pour : " + this.subject + "."
-              + "<br> Société : " + this.society
-              + "<br> Email : " + this.email
-              + "<br> Message : " + this.message
-      }).then(() => alert("Votre message a été correctement envoyé"));
+        Body:
+          "Vous avez une nouvelle demande de contact pour : " +
+          this.subject +
+          "." +
+          "<br> Société : " +
+          this.society +
+          "<br> Email : " +
+          this.email +
+          "<br> Message : " +
+          this.message,
+      }).then(() =>
+        Swal.fire({
+          icon: "success",
+          title: "A Bientot",
+          text: "Message envoyé avec succès",
+          showConfirmButton: false,
+          timer: 1500
+        })
+      );
     },
+    reset() {
+      this.$refs.form.reset()
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
-@import '../scss/variables.scss';
-
+@import "../scss/variables.scss";
 
 #contact {
   display: flex;
